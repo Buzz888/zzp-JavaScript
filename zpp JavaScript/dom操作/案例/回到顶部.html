@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		html,body{
+			height: 1000%;
+			background: -webkit-linear-gradient(top left,lightblue,lightpink,lightyellow);
+		}
+		.link{
+			display:none;
+			box-sizing: border-box;
+			width: 100px;
+			bottom: 230px;
+			height: 100px;
+			position: fixed;
+			right: 30px;
+			background-color: #FA8072;
+			font-size: 16px;
+			color:dimgrey;			
+			text-decoration: none;
+			text-align: center;
+			line-height: 100px;
+		}
+	</style>
+	<body>
+		<a href="javascript:;" id="link" class="link">回到顶部</a>
+	</body>
+	<script>
+		var html = document.documentElement
+		var link = document.querySelector('#link')
+		function cheek(){
+			let winH = html.clientHeight,
+			    scroot =html.scrollTop
+				 link.style.display=scroot>=winH*2?'block':'none'
+		}
+		window.onscroll=cheek;
+		link.onclick =function(){
+			window.onscroll = null 
+			link.style.display='none'
+			let step = 3000
+			let timer = setInterval(function(){
+				let curt = html.scrollTop;
+				if(curt ===0){
+					window.onscroll = cheek
+					clearInterval(timer) 
+					return
+				}
+				curt-=step
+				html.scrollTop=curt
+				
+			},17)}
+			
+			
+		
+	</script>
+</html>

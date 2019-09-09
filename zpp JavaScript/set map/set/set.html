@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			const set1 = new Set(['black','white'])
+			set1.add('red')
+			set1.add('blue')
+			set1.delete('red')
+			console.log(set1.has('red'))
+			let val =set1.values()
+			for (let item of set1) {
+				console.log(item)
+				
+			}
+			set1.forEach(item=>{console.log(item)})
+			console.log(val.next())
+			console.log(set1.size)
+			set1.clear()
+			let ary =[1,6,6,1,9,8,6,9,90,6]
+			let set2 = new Set(ary)
+			console.log(set2)
+			ary=[...set2]
+			console.log(ary)
+			const set3 = new WeakSet()
+			
+			set3.add(ary)
+		</script>
+	</body>
+</html>

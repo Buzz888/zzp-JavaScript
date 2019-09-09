@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let stu = new Map()
+			stu.set('zs',18)
+			stu.set('zss',12)
+			stu.set('zsss',12)
+			console.log(stu)
+			console.log(stu.get('zs'))
+			console.log(stu.size)
+			console.log(stu.has('zs'))
+			stu.forEach((item,key,map)=>{
+				console.log(key)
+				
+			})
+			for (let [key, value] of stu) {
+				console.log(key,value)
+				
+			}
+		</script>
+	</body>
+</html>

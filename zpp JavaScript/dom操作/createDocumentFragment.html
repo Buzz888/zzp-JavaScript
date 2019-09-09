@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div">
+			<ul>
+			<li>Safari</li>
+			<li>Firefox</li>
+			<li>Chrome</li>
+			<li>Opera</li>
+			<li>Internet Explorer</li>
+		   </ul>
+		</div>
+	</body>
+	<script>
+		var fragment = document.createDocumentFragment(); 
+		var elall = document.querySelectorAll('#div')[0]
+		var firstChild
+		while(firstChild=elall.firstChild){
+			fragment.appendChild(firstChild)
+		}
+		console.log(fragment)
+		
+	</script>
+</html>

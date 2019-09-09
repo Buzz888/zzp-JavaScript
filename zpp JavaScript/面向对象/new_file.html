@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function fn(name, age, color) {
+				this.name = name
+				this.age = age
+				this.color = color
+			
+			
+			}
+			function new1(){
+				let a ={}
+				
+				let [con,...agu]=[...arguments]
+				
+				a.__proto__=con.prototype
+				let c = con.apply(a,agu)
+				if(c&&typeof(c)=='object'||typeof(c)=='function'){
+					return c
+				} 
+				return a
+			}
+			let g= new1(fn,'jack',23,2)
+			console.log(g)
+		</script>
+	</body>
+</html>

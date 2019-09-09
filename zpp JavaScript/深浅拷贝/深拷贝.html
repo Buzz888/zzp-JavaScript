@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script>
+		var stu ={
+			id:'1',
+			name:'jack',
+			age:{id:1}
+		}
+		var stu1 ={}
+		function fn(newobj,oldobj){
+			for (let item in oldobj) {
+				item1=oldobj[item]
+				if(item instanceof Array){
+					newobj[item]=[]
+					fn(newobj[item],item1)
+				}
+				else if(item instanceof Object){
+					newobj[item]={}
+					fn(newObj[item],item1)
+				}
+				
+				newobj[item]=item1
+				
+				
+			}
+		}
+		fn(stu1,stu)
+		console.log(stu1)
+	</script>
+</html>

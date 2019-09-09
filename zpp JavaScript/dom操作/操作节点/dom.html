@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<h1>1
+				<h2></h2>
+				<h2>2</h2>
+				<h2></h2>
+			</h1>
+		</div>
+	</body>
+	<script>
+		var div = document.querySelector('#box')
+		console.log(div.parentNode)
+		console.log(div.childNodes[0]) //NodeList(8) [text, h1, h2, text, h2, text, h2, text]
+		console.log(div.children) //=>HTMLCollection(4) [h1, h2, h2, h2]
+		var i = 2
+		div.index=i
+		console.log(div.index)
+		div.setAttribute('el','123')
+		console.log(div.getAttribute('el'))
+		
+	</script>
+</html>
