@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function* hellogen(){
+				yield 'hello';
+				yield 'world';
+				return 'ending'
+			}
+			var hw = hellogen()
+			console.log(hw.next())
+			//{value: "hello", done: false}
+			console.log(hw.next())
+			//{value: "world", done: false}
+			console.log(hw.next())
+			// {value: "ending", done: true}/
+			console.log(hw.next())
+			//{value: undefined, done: true}
+			function* match1(){
+				yield 123+234
+			}
+			let mh = match1()
+			//{value: 357, done: false}使用next后才求值
+			console.log(mh.next())
+			
+			function* f() {
+			  console.log('执行了！')
+			}
+			
+			var generator = f();
+			
+			generator.next()
+			console.log(7)
+			function* fn(){
+				console.log('hello'+(yield))
+			}
+			let a =fn()
+		</script>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function* fn(){
+				yield this.a = 778899
+				yield this.b =998877
+			}
+			let fn1={}
+			let fn2 = fn.call(fn1)
+			console.log(fn2.next())
+			console.log(fn2.next())
+			console.log(fn1)
+			
+		</script>
+	</body>
+</html>
