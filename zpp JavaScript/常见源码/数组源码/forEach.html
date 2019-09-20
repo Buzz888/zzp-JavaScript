@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			Array.prototype.each=function(callback){
+				for (let i = 0; i < this.length; i++) {
+					callback.call(this,this[i],i)
+					
+				}
+				
+			}
+			let b = [1,3,2,4,4]
+			b.each(function(item,index){
+				console.log(this[index])
+				
+			})
+		</script>
+	</body>
+</html>

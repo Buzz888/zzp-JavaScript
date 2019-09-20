@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			String.prototype.myreplace = function(oldval,newval){
+				let reg = new RegExp(oldval)
+				let a = this
+			 reg.exec(a).index=newval
+				return 
+				
+			    
+				
+			}
+			let a = 'hello wold'
+			let b = a.myreplace('h','w')
+			console.log(b)
+		</script>
+	</body>
+</html>

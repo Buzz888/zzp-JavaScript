@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let a = 'hHeElLlLOo';
+			String.prototype.replaceul= function(){
+				return this.replace(/[a-zA-z]/g,
+				content=>{ return content.toUpperCase()===content?content.toLowerCase():content.toUpperCase()})}
+			
+			
+			a = a.replaceul()
+			console.log(a)
+		</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			String.prototype.myindexOf=function(val){
+				let reg = new RegExp(val)
+				return reg.exec(this)===null?-1:reg.exec(this).index
+				
+			}
+			let a = 'helloworldmybbb';
+			let b = 'world';
+			console.log(a.myindexOf(b))
+		</script>
+	</body>
+</html>

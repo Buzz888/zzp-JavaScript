@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let ary = [1,[2,[322,2]],1,[31],1,2]
+				
+			while(ary.some(item =>Array.isArray(item))){
+				ary= [].concat(...ary)
+			}
+			console.log(ary)
+		</script>
+	</body>
+</html>

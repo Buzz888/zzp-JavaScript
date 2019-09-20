@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			let a = [1,[2,[322,2]],1,[31],1,2]
+			a = JSON.stringify(a).replace(/\[|\]/g,'').split(',').map(item=>Number(item))
+			console.log(a);
+		</script>
+	</body>
+</html>

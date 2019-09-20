@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			Function.prototype.myApply = function(context = window, args = []) {
+			  context = context || window; // 参数默认值并不会排除null，所以重新赋值
+			  context.fn = this; // this是调用call的函数
+			  const result = context.fn(...args);
+			  delete context.fn;
+			  return result;
+			}
+			let num = [1,2,3,4,2,5,2]
+			console.log(Math.max.myApply(Math,num))
+			Math.max.apply(Math,num)
+			
+		</script>
+	</body>
+</html>
